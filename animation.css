@@ -13,7 +13,7 @@
   animation-play-state: paused;
 }
 
-.SquareOne:active {
+.SquareOne:hover {
   animation-play-state: running;
 }
 
