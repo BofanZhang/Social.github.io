@@ -1,69 +1,67 @@
-.SquareOne {
-  top: 100px;
-  left: 100px;
+.Forward {
   width: 100px;
   height: 100px;
-  border: 2px solid;
-  background-color: teal;
+  font-size: 0;
+  background-color: white;
+  border: 1px solid;
   position: relative;
-  animation-name: test;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-play-state: paused;
-}
-
-.SquareOne:hover {
-  animation-play-state: running;
+  animation: test 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
 }
 
 @keyframes test {
-  0% {
-    transform: rotate(0);
-    background-color: teal;
+  from {
+    font-size: 0;
+    top: 0px;
+    left: 0px;
+    width: 100px;
+    height: 100px;
   }
-  25% {
-    background-color: green;
-  }
-  50% {
+  to {
+    top: 200px;
+    left: 200px;
+    width: 200px;
+    height: 200px;
+    color: white;
+    font-size: 15px;
     background-color: blue;
   }
-  75% {
-    background-color: red;
-  }
-  100% {
-    transform: rotate(360deg);
-    background-color: teal;
-  }
 }
 
-.SquareTwo {
-  top: 150px;
-  left: 100px;
+.Backwards {
   width: 100px;
   height: 100px;
-  border: 2px solid;
-  background-color: teal;
+  background-color: blue;
   position: relative;
-  animation-name: Test2;
-  animation-duration: 3s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-play-state: paused;
+  animation: test2 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
 }
 
-.SquareTwo:hover {
-  animation-play-state: running;
+@keyframes test2 {
+  from {
+    width: 200px;
+    top: 200px;
+    height: 200px;
+    left: 200px;
+    font-size: 15px;
+  }
+  to {
+    background-color: white;
+    top: 0px;
+    left: 0px;
+    font-size: 0;
+    height: 100px;
+    width: 100px;
+  }
 }
 
-@keyframes Test2 {
-  0% {
-    transform: translateX(0px);
-  }
-  25% {
-    transform: translateX(100px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
+h1 {
+  width: 100px;
+  height: 100px;
+  border: 1px solid;
+  background-color: white;
+  font-size: 0;
+  text-align: center;
 }
