@@ -1,11 +1,29 @@
-.Forward {
+.element {
+  position: relative;
+  left: 200px;
+  border: 1px solid;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+}
+
+.element1 {
+  position: relative;
+  left: 500px;
+  top: 500px;
+  border: 1px solid;
   width: 100px;
   height: 100px;
+}
+
+.Forward {
+  width: 10px;
+  height: 10px;
   font-size: 0;
-  background-color: white;
+  background-color: red;
   border: 1px solid;
   position: relative;
-  animation: test 1s;
+  animation: test 0.5s;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
 }
@@ -13,55 +31,39 @@
 @keyframes test {
   from {
     font-size: 0;
-    top: 0px;
-    left: 0px;
-    width: 100px;
-    height: 100px;
+    width: 10px;
+    height: 10px;
   }
   to {
-    top: 200px;
-    left: 200px;
-    width: 200px;
-    height: 200px;
-    color: white;
+    width: 500px;
+    height: 600px;
+    color: black;
     font-size: 15px;
-    background-color: blue;
+    background-color: white;
   }
 }
 
 .Backwards {
-  width: 100px;
-  height: 100px;
-  background-color: blue;
+  width: 10px;
+  height: 10px;
+  border: 1px solid;
+  background-color: white;
   position: relative;
-  animation: test2 1s;
+  animation: test2 0.5s;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
 }
 
 @keyframes test2 {
   from {
-    width: 200px;
-    top: 200px;
-    height: 200px;
-    left: 200px;
+    width: 500px;
+    height: 600px;
     font-size: 15px;
   }
   to {
-    background-color: white;
-    top: 0px;
-    left: 0px;
+    background-color: red;
     font-size: 0;
-    height: 100px;
-    width: 100px;
+    height: 10px;
+    width: 10px;
   }
-}
-
-h1 {
-  width: 100px;
-  height: 100px;
-  border: 1px solid;
-  background-color: white;
-  font-size: 0;
-  text-align: center;
 }
