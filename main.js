@@ -1,12 +1,11 @@
 const element = document.querySelector(`#test1`);
-const element1 = document.querySelector(`#test2`);
-
-let isAnimated1 = false;
+const element2 = document.querySelector(`#test2`);
 let isAnimated = false;
+let isAnimated2 = false;
 
 var str = `This is the first line\nand this is the second line`;
 // Fix This Part In Order to Fit An Size Msg into the Box
-let msg = "<b>The Enlightenment: </b>" + "<br>" + "The Enlightenment was...";
+
 element.addEventListener(`click`, () => {
   if (isAnimated) {
     element.classList.remove(`Forward`);
@@ -14,20 +13,19 @@ element.addEventListener(`click`, () => {
     isAnimated = false;
   } else {
     element.classList.remove(`Backwards`);
-    document.getElementById("test1").innerHTML = msg;
     element.classList.add(`Forward`);
     isAnimated = true;
   }
 });
 
-element1.addEventListener(`click`, () => {
-  if (isAnimated1) {
-    element1.classList.remove(`element1`);
-    element1.classList.add(`Backwards`);
-    isAnimated1 = false;
+element2.addEventListener(`click`, () => {
+  if (isAnimated2) {
+    element2.classList.remove(`Forward`);
+    element2.classList.add("Backwards");
+    isAnimated2 = false;
   } else {
-    element1.classList.remove(`Backwards`);
-    element1.classList.add(`element1`);
-    isAnimated1 = true;
+    element2.classList.remove(`Backwards`);
+    element2.classList.add(`Forward`);
+    isAnimated2 = true;
   }
 });
